@@ -1,3 +1,36 @@
+/*
+==============================
+
+    Coded by: Yahmo
+    Contact me:
+        Discord: Yahmo#1941
+        Telegram: @Yahmoooo
+        
+    Version: 1.0.0
+        
+==============================      
+*/
+
+/*
+==============================
+    Config Start
+    
+==============================   
+*/
+  let bgColor = new Color("#171717")
+/*
+==============================
+    Config end
+    
+==============================
+*/
+/*
+==============================
+   
+     API Start
+    
+==============================   
+*/
 let req = new Request("http://t-online.de/a/api/v1/pages/sections/homepage.json");
 req.method = "get";
 req.headers = {
@@ -37,10 +70,21 @@ log(teaserImageFound)
 let reqTeaser = new Request(teaserImageFound)
 let teaserImage = await reqTeaser.loadImage()
 
+/*
+==============================
 
+    API End
+    
+==============================   
+*/
+/*
+==============================
+
+    Widget Start
+    
+==============================   
+*/
 let widget = createWidget()
-let bgColor = new Color("#171717")
-
 
 widget.backgroundColor = bgColor
 if (config.runsInWidget) {
@@ -138,3 +182,10 @@ function createWidget() {
 
   return w
 }
+/*
+==============================
+
+    Widget End
+    
+==============================   
+*/
